@@ -1,0 +1,45 @@
+.p-grid{
+
+    display: flex;
+
+    }
+
+ 
+
+    .p-col-4{
+
+    flex: 2;
+
+    margin-right: 10px;
+
+    }
+
+    .text
+
+    {
+
+       margin-right: 420px;
+
+    }
+
+ 
+/* Adjust the width of the tables and provide some spacing */
+.p-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the "Add New Record" button */
+  .p-button {
+    margin-bottom: 10px;
+  }
+  
+  /* Center the button horizontally */
+  .p-button-center {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  
+   

@@ -1,0 +1,242 @@
+<div class="card mt-5" style="width: 100rem;" style="margin-left: 100px;">
+
+
+    <p-table [value]="DataDetails" selectionMode="single" dataKey="Location" styleClass="p-datatable-gridlines"
+    [scrollable]="true" sortMode="single" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" [rows]="7"
+    [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [tableStyle]="{ 'min-width': '50rem' }">
+     
+
+
+
+    <ng-template pTemplate="caption">
+
+
+        <button pButton pRipple label="Add New Record" icon="pi pi-plus" class="p-button mr-2" pTooltip="XLS"
+            tooltipPosition="bottom"></button>
+
+
+    </ng-template>
+
+    <ng-template pTemplate="header">
+        
+
+
+
+        <tr>
+
+
+            <!-- <th  >
+                </th> -->
+
+
+            <th class="header-cell" pSortableColumn="SNo">Sl.No<p-sortIcon field="SNo"></p-sortIcon>
+                <p-columnFilter type="text" field="SNo" display="menu"></p-columnFilter>
+
+            </th>
+            <th class="header-cell" pSortableColumn=" ProductCode"> Product Code <p-sortIcon
+                    field=" ProductCode"></p-sortIcon>
+                <p-columnFilter type="text" field=" ProductCode" display="menu"></p-columnFilter>
+
+            <th class="header-cell" pSortableColumn="ProductName"> Product Name <p-sortIcon
+                    field=" ProductName"></p-sortIcon>
+                <p-columnFilter type="text" field="ProductName" display="menu"></p-columnFilter>
+            </th>
+            <th class="header-cell" pSortableColumn="CurrentVersion">Current Version <p-sortIcon
+                    field="CurrentVersion"></p-sortIcon>
+                <p-columnFilter type="text" field="CurrentVersion" display="menu"></p-columnFilter>
+
+            </th>
+            <th>Action</th>
+
+        </tr>
+  
+        <!-- *ngFor="let user of Users" class="table-row" -->
+    </ng-template>
+ 
+
+
+
+    <ng-template pTemplate="body" let-user>
+        <tr [pSelectableRow]="user">
+            <!-- <td></td>  -->
+
+            <td>{{ user.SNo }}</td>
+            <td>{{ user.ProductCode}}</td>
+            <td>{{ user. ProductName}}</td>
+            <td>{{ user.CurrentVersion }}</td>
+            <td>
+                <button pButton pRipple label="Edit" class="p-button-success"></button>
+                &nbsp;
+                <button pButton pRipple label="Delete" class="p-button-success"></button>
+
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+
+<br>
+<br>
+
+<div class="p-fluid">
+
+
+
+    <!-- <div class="p-fieldset ">  -->
+
+
+
+    <div class="p-grid form-row">
+
+        <div class="p-col-4">
+
+            <div class="p-field p-field-align-center">
+
+                <p-table [value]="DataDetails" selectionMode="single" dataKey="Location"
+                    styleClass="p-datatable-gridlines" [scrollable]="true" sortMode="single"
+                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" [rows]="7" [paginator]="true"
+                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                    [tableStyle]="{ 'min-width': '50rem' }">
+
+                    <ng-template pTemplate="caption">
+
+
+                        <button pButton pRipple label="WBM Modules" icon="pi pi-plus" class="p-button mr-2"
+                            pTooltip="XLS" tooltipPosition="bottom"></button>
+
+
+
+                    </ng-template>
+
+                    <ng-template pTemplate="header">
+
+
+                        <tr>
+
+
+                            <!-- <th  >
+              </th> -->
+
+
+                            <th class="header-cell" pSortableColumn="SNO">Sl.No<p-sortIcon field="SNO"></p-sortIcon>
+                                <p-columnFilter type="text" field="SNO" display="menu"></p-columnFilter>
+
+                            </th>
+                            <th class="header-cell" pSortableColumn=" ModuleCode"> Module Code <p-sortIcon
+                                    field="ModuleCode"></p-sortIcon>
+                                <p-columnFilter type="text" field="ModuleCode" display="menu"></p-columnFilter>
+
+                            <th class="header-cell" pSortableColumn="ModuleName">Module Name<p-sortIcon
+                                    field="ModuleName"></p-sortIcon>
+                                <p-columnFilter type="text" field="ModuleName" display="menu"></p-columnFilter>
+                            </th>
+                            <th class="header-cell" pSortableColumn="Active">Active <p-sortIcon
+                                    field="Active"></p-sortIcon>
+                                <p-columnFilter type="text" field="Active" display="menu"></p-columnFilter>
+
+                            </th>
+
+
+                        </tr>
+
+                        <!-- *ngFor="let user of Users" class="table-row" -->
+                    </ng-template>
+
+                    <ng-template pTemplate="body" let-user>
+                        <tr [pSelectableRow]="user">
+                            <!-- <td></td>  -->
+
+                            <td>{{ user.SNo}}</td>
+                            <td>{{user.ModuleCode}}</td>
+                            <td>{{ user.ModuleName }}</td>
+                            <td>{{ user.Active }}</td>
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+
+            </div>
+
+        </div>
+
+        <div class="p-col-4">
+
+            <div class="p-field p-field-align-center">
+
+
+
+                <p-table [value]="DataDetails" selectionMode="single" dataKey="Location"
+                    styleClass="p-datatable-gridlines" [scrollable]="true" sortMode="single"
+                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" [rows]="7" [paginator]="true"
+                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                    [tableStyle]="{ 'min-width': '50rem' }">
+
+                    <ng-template pTemplate="caption">
+
+
+                        <button pButton pRipple label="WBM Version history" icon="pi pi-plus" class="p-button mr-2"
+                            pTooltip="XLS" tooltipPosition="bottom"></button>
+
+
+                    </ng-template>
+
+                    <ng-template pTemplate="header">
+
+
+                        <tr>
+
+
+               
+                            <th class="header-cell" pSortableColumn="SlNo">Version Number<p-sortIcon
+                                    field="Sl.NO"></p-sortIcon>
+                                <p-columnFilter type="text" field="SlNO" display="menu"></p-columnFilter>
+
+                            </th>
+                            <th class="header-cell" pSortableColumn="VersionDate"> Version Date <p-sortIcon
+                                    field="VersionDate"></p-sortIcon>
+                                <p-columnFilter type="text" field="VersionDate" display="menu"></p-columnFilter>
+
+                            <th class="header-cell" pSortableColumn=""><p-sortIcon field=""></p-sortIcon>
+                                <p-columnFilter type="text" field="" display="menu"></p-columnFilter>
+                            </th>
+
+
+
+                        </tr>
+
+                        <!-- *ngFor="let user of Users" class="table-row" -->
+                    </ng-template>
+
+                    <ng-template pTemplate="body" let-user>
+                        <tr [pSelectableRow]="user">
+
+                            <td>{{ user.VersionNumber}}</td>
+                            <td>{{ user.versionDate}}</td>
+                            <td>{{ user.UoM }}</td>
+
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+                
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
